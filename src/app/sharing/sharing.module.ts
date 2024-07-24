@@ -13,9 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
-const COMPONENTS: any[] = [];
-const DIRECTIVES: any[] = [];
-const PIPES: any[] = [];
+
 const MODULES: any[] = [
   MatTableModule,
   MatButtonModule,
@@ -30,12 +28,11 @@ const MODULES: any[] = [
   MatDatepickerModule,
   MatNativeDateModule
 ];
-const SERVICES: any[] = [];
 
 @NgModule({
-  declarations: [...COMPONENTS, ...DIRECTIVES, ...PIPES],
+  declarations: [],
   imports: [CommonModule, ...MODULES],
-  exports: [...COMPONENTS, ...MODULES, ...DIRECTIVES, ...PIPES],
-  providers: [...SERVICES],
+  exports: [ ...MODULES],
+  providers: [],
 })
 export class SharingModule {}

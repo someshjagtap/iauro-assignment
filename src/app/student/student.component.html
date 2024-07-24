@@ -28,6 +28,11 @@
     <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="birthDate">
+    <th mat-header-cell *matHeaderCellDef> Birth Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.dateOfBirth | date: 'mediumDate'}} </td>
+  </ng-container>
+
   <!-- Symbol Column -->
   <ng-container matColumnDef="gender">
     <th mat-header-cell *matHeaderCellDef> Gender </th>

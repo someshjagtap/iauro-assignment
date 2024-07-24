@@ -13,6 +13,7 @@ export class StudentComponent {
     'Sr.No',
     'firstName',
     'lastName',
+    'birthDate',
     'gender',
     'phoneNumber',
     'action',

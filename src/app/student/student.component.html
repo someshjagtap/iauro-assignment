@@ -46,11 +46,11 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef> Action </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-mini-fab  (click)="addStudent(element)">
+      <button mat-mini-fab  color="primary" (click)="addStudent(element)">
         <mat-icon>edit</mat-icon>
       </button>
        &nbsp;&nbsp;
-       <button mat-mini-fab  (click)="deleteStudent(element)">
+       <button mat-mini-fab  color="warn" (click)="deleteStudent(element)">
         <mat-icon>delete_forever</mat-icon>
       </button>
      </td>

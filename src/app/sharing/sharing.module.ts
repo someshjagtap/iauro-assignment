@@ -10,9 +10,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { LookupService } from './Services/lookup.service';
+import { OperationService } from './Services/operation.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const MODULES: any[] = [
   MatTableModule,
@@ -26,13 +28,15 @@ const MODULES: any[] = [
   MatIconModule,
   MatCardModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
 ];
+
+const SERVICES: any[] = [];
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, ...MODULES],
-  exports: [ ...MODULES],
-  providers: [],
+  exports: [...MODULES],
+  providers: [...SERVICES],
 })
 export class SharingModule {}

@@ -3,9 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path:'',
+    redirectTo: 'student',
+    pathMatch: 'full'
+  },
+  {
     path: 'student',
     loadChildren: () =>
       import('./student/student.module').then((m) => m.StudentModule),
+  },
+  {
+    path: 'student-detail',
+    loadChildren: () =>
+      import('./student-detail/student-detail.module').then(
+        (m) => m.StudentDetailModule
+      ),
   },
 ];
 

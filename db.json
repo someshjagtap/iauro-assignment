@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "firstName": "Deepak",
+      "lastName": "Patil",
+      "email": "maheshp@gmail.com",
+      "dateOfBirth": "2024-07-09T18:30:00.000Z",
+      "gender": "Male",
+      "phoneNumber": 9876543210,
+      "street": "Lane 1",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "postalCode": "654321",
+      "country": "India",
+      "enrollmentDate": "2024-07-29T18:30:00.000Z",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "firstName": "Swati",
+      "lastName": "Shirsath",
+      "email": "swati@gmail.com",
+      "dateOfBirth": "2024-07-14T18:30:00.000Z",
+      "gender": "Female",
+      "phoneNumber": 9876543210,
+      "street": "Navle bridge",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "postalCode": "543211",
+      "country": "India",
+      "enrollmentDate": "2024-07-26T18:30:00.000Z",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "firstName": "Rahul",
+      "lastName": "Shevale",
+      "email": "shevale@gmail.com",
+      "dateOfBirth": "2024-07-19T18:30:00.000Z",
+      "gender": "Male",
+      "phoneNumber": 9876543211,
+      "street": "",
+      "city": "",
+      "state": "",
+      "postalCode": "",
+      "country": "",
+      "enrollmentDate": "",
+      "isActive": true
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,5 +1,4 @@
 
-
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -14,5 +13,15 @@
 
 .full-width {
   width: 100%;
+}
+
+.demo-button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+}
+
+.demo-button + .demo-button {
+  margin-left: 8px;
 }
 

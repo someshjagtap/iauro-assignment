@@ -22,6 +22,7 @@ export class StudentComponent {
   @ViewChild(MatTable) table!: MatTable<StudentDTO>;
 
   constructor(public dialog: MatDialog) {}
+
   addStudent(student: StudentDTO | undefined) {
     const dialogRef = this.dialog.open(StudentDialogComponent, {
       data: student,
@@ -39,12 +40,11 @@ export class StudentComponent {
       console.log('datasource', this.dataSource);
       this.table.renderRows();
     } else {
-      if(typeof(student) == 'object'){
+      if (typeof student == 'object') {
         this.dataSource.push(student);
         console.log('datasource', this.dataSource);
         this.table.renderRows();
       }
-
     }
   }
 

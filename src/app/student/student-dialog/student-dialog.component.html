@@ -1,0 +1,160 @@
+<h2 mat-dialog-title>{{studentForm.get('id')?.value != undefined ? 'Update' : 'Create'}} Student</h2>
+<mat-dialog-content>
+  <form [formGroup]="studentForm">
+    <div class="form-grid">
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" placeholder="Enter your first name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint: Enter your first name</mat-hint>
+          <mat-error *ngIf="studentForm?.get('firstName')?.invalid && studentForm?.get('firstName')?.touched">
+            First name is required and should be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" placeholder="Enter your last name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint: Enter your last name</mat-hint>
+          <mat-error *ngIf="studentForm?.get('lastName')?.invalid && studentForm?.get('lastName')?.touched">
+            Last name is required and should be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Enter your email">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-hint>Hint: Enter your email address</mat-hint>
+          <mat-error *ngIf="studentForm?.get('email')?.invalid && studentForm?.get('email')?.touched">
+            Valid email is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dateOfBirth" placeholder="Enter your date of birth">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="studentForm?.get('dateOfBirth')?.invalid && studentForm?.get('dateOfBirth')?.touched">
+            Date of birth is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-hint>Hint: Select your gender</mat-hint>
+          <mat-error *ngIf="studentForm?.get('gender')?.invalid && studentForm?.get('gender')?.touched">
+            Gender is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="number" formControlName="phoneNumber" placeholder="Enter your phone number">
+          <mat-hint>Hint: Enter your phoneNumber </mat-hint>
+          <mat-error *ngIf="studentForm?.get('phoneNumber')?.invalid && studentForm?.get('phoneNumber')?.touched">
+            Phone Number is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="form-grid">
+      <div>
+        <h4 mat-dialog-title>Address details</h4>
+      </div>
+      <br>
+
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Street</mat-label>
+          <input matInput formControlName="street" placeholder="Enter street name">
+          <mat-hint>Hint: Enter your Street</mat-hint>
+          <mat-error *ngIf="studentForm?.get('street')?.invalid && studentForm?.get('street')?.touched">
+            Street is required and should be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" placeholder="Enter city name">
+          <mat-hint>Hint: Enter your city</mat-hint>
+          <mat-error *ngIf="studentForm?.get('city')?.invalid && studentForm?.get('city')?.touched">
+            city is required and should be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state" placeholder="Enter state name">
+          <mat-hint>Hint: Enter your state</mat-hint>
+          <mat-error *ngIf="studentForm?.get('state')?.invalid && studentForm?.get('state')?.touched">
+            state is required and should be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Postal Code</mat-label>
+          <input matInput formControlName="postalCode" placeholder="Enter Postal Code">
+          <mat-hint>Hint: Enter your PostalCode</mat-hint>
+          <mat-error *ngIf="studentForm?.get('postalCode')?.invalid && studentForm?.get('postalCode')?.touched">
+            PostalCode is required and should be 6 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Country</mat-label>
+          <input matInput formControlName="country" placeholder="Enter Country">
+          <mat-hint>Hint: Enter your country</mat-hint>
+          <mat-error *ngIf="studentForm?.get('country')?.invalid && studentForm?.get('country')?.touched">
+            Country is required and should be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Enrollment Date</mat-label>
+          <input matInput [matDatepicker]="enrollmentpicker" formControlName="enrollmentDate"
+            placeholder="Enter your Enrollment Date">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="enrollmentpicker"></mat-datepicker-toggle>
+          <mat-datepicker #enrollmentpicker></mat-datepicker>
+          <mat-error *ngIf="studentForm?.get('enrollmentDate')?.invalid && studentForm?.get('enrollmentDate')?.touched">
+            Enrollment Date is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+    </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button [mat-dialog-close]="true" cdkFocusInitial type="submit" mat-raised-button color="primary"
+    [disabled]="studentForm.invalid" (click)="onSubmit()">Save</button>
+</mat-dialog-actions>

@@ -1,0 +1,46 @@
+/* .form-grid {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .form-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .form-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px;
+  gap: 16px; /* Adjust this value to control the spacing between fields */
+}
+
+.form-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Ensure the button spans two columns */
+/* .form-grid > div:last-child {
+  grid-column: span 2;
+} */
